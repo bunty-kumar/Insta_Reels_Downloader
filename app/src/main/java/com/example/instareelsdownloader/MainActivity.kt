@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         tabLayout = findViewById<TabLayout>(R.id.tabBar)
         viewPager = findViewById<ViewPager>(R.id.viewpager)
 
@@ -26,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         tabLayout!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
+
                 viewPager!!.currentItem = tab.position
             }
             override fun onTabUnselected(tab: TabLayout.Tab) {
